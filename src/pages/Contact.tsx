@@ -11,15 +11,28 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section 
-        className="relative h-96 flex items-center justify-center bg-cover bg-center"
+            <section 
+        className="relative h-[80vh] flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(33, 64, 154, 0.8), rgba(33, 64, 154, 0.8)), url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
+          backgroundImage: `linear-gradient(rgba(33, 64, 154, 0.8), rgba(33, 64, 154, 0.8)), url('https://media.istockphoto.com/id/1125563202/photo/pvc-pipes-stacked-in-warehouse.jpg?s=612x612&w=0&k=20&c=acH74H78RzIOGHRQM-zy4dy49wBzlLn5_mbXUHguNeE=')`
         }}
       >
-        <div className="text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl">Get in touch for all your plastic manufacturing needs</p>
+        <div className="text-center text-white max-w-4xl mx-auto px-4 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Start a Conversation
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-gray-200">
+           From idea to production — we’re here to help you every step of the way.
+          </p>
+          <a
+            href="https://wa.me/923218855277"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-falcon-gold text-falcon-dark-blue hover:bg-yellow-400 text-lg px-8 py-3">
+              Get in Touch
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -36,48 +49,57 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <a target='_blank' href="https://maps.app.goo.gl/K8JwjoX67ddSebDc7?g_st=com.google.maps.preview.copy">
             <Card className="text-center hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8">
                 <MapPin className="h-12 w-12 text-falcon-gold mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-falcon-dark-blue mb-3">
+                
+                  <h3 className="text-xl font-semibold text-falcon-dark-blue mb-3">
                   Location
                 </h3>
                 <p className="text-gray-600">
                   Bund Road<br />
                   Lahore, Pakistan
                 </p>
+                
               </CardContent>
             </Card>
+            </a>
 
-            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-8">
-                <Phone className="h-12 w-12 text-falcon-gold mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-falcon-dark-blue mb-3">
-                  WhatsApp
-                </h3>
-                <a 
-                  href="https://wa.me/923218855277" 
-                  className="text-falcon-blue hover:text-falcon-dark-blue transition-colors"
-                >
-                  +92 321 885 5277
-                </a>
-              </CardContent>
-            </Card>
+            <a 
+  target='_blank'
+  href="https://wa.me/923218855277" 
+  className="text-falcon-blue hover:text-falcon-dark-blue transition-colors"
+>
+  <Card className="text-center hover:shadow-lg transition-shadow duration-300 h-full">
+    <CardContent className="p-8 flex flex-col justify-between h-full">
+      <Phone className="h-12 w-12 text-falcon-gold mx-auto mb-4" />
+      <h3 className="text-xl font-semibold text-falcon-dark-blue mb-3">
+        WhatsApp
+      </h3>
+      <p className="text-gray-600">
+        +92 321 885 5277
+      </p>
+    </CardContent>
+  </Card>
+</a>
 
-            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-8">
-                <Mail className="h-12 w-12 text-falcon-gold mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-falcon-dark-blue mb-3">
-                  Email
-                </h3>
-                <a 
-                  href="mailto:falconplasticindustry@gmail.com" 
-                  className="text-falcon-blue hover:text-falcon-dark-blue transition-colors break-all"
-                >
-                  falconplasticindustry@gmail.com
-                </a>
-              </CardContent>
-            </Card>
+<Card className="text-center hover:shadow-lg transition-shadow duration-300 h-full">
+  <CardContent className="p-8">
+    <Mail className="h-12 w-12 text-falcon-gold mx-auto mb-4" />
+    <h3 className="text-xl font-semibold text-falcon-dark-blue mb-3">
+      Email
+    </h3>
+    <a
+      href="mailto:falconplasticindustry@gmail.com"
+      className="text-falcon-blue hover:text-falcon-dark-blue transition-colors break-all block"
+    >
+      falconplasticindustry@gmail.com
+    </a>
+  </CardContent>
+</Card>
+
+
 
             <Card className="text-center hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8">
@@ -87,7 +109,7 @@ const Contact = () => {
                 </h3>
                 <p className="text-gray-600">
                   Monday - Saturday<br />
-                  9:00 AM - 6:00 PM
+                  9:00 AM - 8:00 PM
                 </p>
               </CardContent>
             </Card>
@@ -137,9 +159,11 @@ const Contact = () => {
               Located on Bund Road, Lahore - easily accessible for meetings and facility tours
             </p>
             <div className="bg-white rounded-lg p-4 shadow-inner">
+              <a target='_blank' href="https://maps.app.goo.gl/K8JwjoX67ddSebDc7?g_st=com.google.maps.preview.copy">
               <p className="text-sm text-gray-600 italic">
                 Google Maps integration available - Contact us for detailed directions
               </p>
+              </a>
             </div>
           </div>
         </div>
@@ -160,7 +184,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="lg" variant="secondary" className="bg-white text-falcon-blue hover:bg-gray-100">
+            <Button size="lg" variant="secondary" className="bg-falcon-gold text-falcon-dark-blue hover:bg-yellow-400 text-lg px-8 py-3">
               Start Conversation
             </Button>
           </a>

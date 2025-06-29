@@ -9,15 +9,15 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
+    { name: 'Products & Services', path: '/products' },
     { name: 'About Us', path: '/about' },
-    { name: 'Products', path: '/products' },
     { name: 'Contact', path: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-white shadow-lg sticky top-0 z-50 py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -25,20 +25,23 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/553f0fdb-33fc-4d52-9d60-0d9fa820291f.png" 
               alt="Falcon Plastic Industries" 
-              className="h-10 w-10"
+              className="h-16 w-16"
             />
             <span className="text-xl font-bold text-falcon-dark-blue">
               Falcon Plastic Industries
+            <span className="text-sm text-gray-700 block">
+              (Pvt.) Ltd.
+            </span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className=" hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`px-3 py-2 text-[16px] font-medium transition-colors duration-200 ${
                   isActive(item.path)
                     ? 'text-falcon-blue border-b-2 border-falcon-blue'
                     : 'text-gray-700 hover:text-falcon-blue'
@@ -58,7 +61,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden ">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-falcon-blue"
@@ -91,7 +94,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <a
-                href="https://wa.me/923218855277"
+                href="https://wa.me/923178552771"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-falcon-blue text-white px-6 py-2 rounded-lg hover:bg-falcon-dark-blue transition-colors duration-200 mt-4"
